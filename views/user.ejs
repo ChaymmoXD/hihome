@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>User Dashboard</h1>
+    <p>Welcome, <%= user.Email %>!</p>
+    <ul>
+
+            <form action="/change-settings/Setare_stare_usa" method="POST">
+                <button type="submit" class="<%= setari[0].Setare_stare_usa ? 'locked' : 'unlocked' %>">
+                    Setare stare usa - <%= setari[0].Setare_stare_usa ? 'locked' : 'unlocked' %>
+                </button>
+            </form>
+
+            <form action="/change-settings/Setare_bec_1" method="POST">
+                <button type="submit" class="<%= setari[0].Setare_bec_1 ? 'locked' : 'unlocked' %>">
+                    Setare bec 1 - <%= setari[0].Setare_bec_1 ? 'locked' : 'unlocked' %>
+                </button>
+            </form>
+
+            <form action="/change-settings/Setare_bec_2" method="POST">
+                <button type="submit" class="<%= setari[0].Setare_bec_2 ? 'locked' : 'unlocked' %>">
+                    Setare bec 2 - <%= setari[0].Setare_bec_2 ? 'locked' : 'unlocked' %>
+                </button>
+            </form>
+
+            <form action="/change-settings/Setare_bec_3" method="POST">
+                <button type="submit" class="<%= setari[0].Setare_bec_3 ? 'locked' : 'unlocked' %>">
+                    Setare bec 3 - <%= setari[0].Setare_bec_3 ? 'locked' : 'unlocked' %>
+                </button>
+            </form>
+
+            <form action="/change-settings/Setare_bec_4" method="POST">
+                <button type="submit" class="<%= setari[0].Setare_bec_4 ? 'locked' : 'unlocked' %>">
+                    Setare bec 4 - <%= setari[0].Setare_bec_4 ? 'locked' : 'unlocked' %>
+                </button>
+            </form>
+
+            <form action="/change-settings/Setare_temperatura" method="POST">
+                    <label for="temperature">Setare Temperatura:</label>
+                    <input type="number" id="temperature" name="temperature" step="0.1" value="<%= setari[0].Setare_temperatura %>">
+                    <button type="submit">Update</button>                    
+            </form>
+            </ul>
+            <a href="/logout">Logout</a>
+</body>
+</html>
